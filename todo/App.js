@@ -10,7 +10,7 @@ Vue.createApp({
             // if message is not empty
             if (this.message !== "") {
                 // update list and set message to blank
-                this.todos = [...this.todos,{value: this.message, checked: false}];
+                this.todos = [...this.todos,this.message];
                 this.message = "";
             }                                      
         },

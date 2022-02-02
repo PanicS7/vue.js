@@ -28,7 +28,7 @@
         <ul class="todo">
           <li v-for="(todo,index) in todos">
             <div class="todo-item">
-              <p :for="'label' + index">{{todo.value}}</p>
+              <p :for="'label' + index">{{todo}}</p>
               <i 
                 v-bind:title="'Click to remove!'" 
                 @click="handleClose(index)" 
