@@ -1,0 +1,68 @@
+/* GLOBALS */
+* {
+    margin: 0;
+    padding: 0;
+}
+[v-cloak] {
+    display: none;
+}
+body {
+    background-color: lightblue;  
+    word-break: break-all;
+}
+
+/* root container */
+#root {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+}
+
+/* input container */
+.inputContainer {
+    width: 60%;
+    height: 30px;
+    margin: auto;
+    border: 3px solid black;
+    display: flex; 
+    justify-content: center;   
+}
+.inputContainer .btn {
+    flex: 1;
+    cursor: pointer;
+}
+.inputContainer .input {
+    flex: 3;
+}
+
+/* todo list */
+.todo {
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: aliceblue;
+}
+.todo li {
+    list-style-type: none;
+    list-style-position: inside; 
+    font-size: 2rem;
+    padding: 10px;
+}
+.todo li div {
+    display: flex;
+    justify-content: space-between;
+}
+.todo-item i {
+    cursor: pointer;
+    color: red;
+}
+
+@media only screen and (max-width: 700px) {
+    .inputContainer, .todo {
+        width: 90%;
+    }
+  }

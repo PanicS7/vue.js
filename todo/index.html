@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Simple To-Do app in vue3.js</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+      <div id="root" v-cloak>
+        <h1>TO-DO APP</h1>
+        <div class="inputContainer">
+          <input 
+            class="input" 
+            placeholder="Add to your to-do list" 
+            v-model.trim="message"
+            @keyup.enter="addTodo"
+          />
+          <button 
+            type="button"
+            @click="addTodo" 
+            class="btn"
+            v-bind:title="'Click to add or press enter key!'"
+          >
+          Add
+          </button>
+        </div>
+
+        <ul class="todo">
+          <li v-for="(todo,index) in todos">
+            <div class="todo-item">
+              <p :for="'label' + index">{{todo.value}}</p>
+              <i 
+                v-bind:title="'Click to remove!'" 
+                @click="handleClose(index)" 
+                class="fas fa-times">
+              </i>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+        <script src="https://unpkg.com/vue@next"></script>                
+        <script src="./App.js"></script>
+    </body>
+</html>
